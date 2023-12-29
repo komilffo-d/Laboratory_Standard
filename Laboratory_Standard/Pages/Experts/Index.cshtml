@@ -1,0 +1,72 @@
+﻿@page
+@model Laboratory_Standard.Pages.Experts.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Страница экпертов";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+    <div class="main__supsuptext">
+        Эксперты
+    </div>
+    <div class="table-outer">
+        <table class="table">
+            <thead>
+                <tr class="table-row">
+                    <th class="table__head-cell">
+                        ФИО эксперта по аккредитации
+                    </th>
+                    <th class="table__head-cell">
+                        Регистрационный номер
+                    </th>
+                @{
+                    if (User != null && User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        <th class="table__head-cell">
+
+                        </th>
+                    }
+                }
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.ExpertDb)
+                {
+                    <tr class="table-row">
+                        <td class="table__body-cell">
+
+                            @item.LastName @item.FirstName @item.MiddleName
+                        </td>
+                        <td class="table__body-cell">
+                            @Html.DisplayFor(modelItem => item.RegisterNumber)
+                        </td>
+                    @{
+                        if (User != null && User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <td class="table__body-cell">
+
+                                <form method="post">
+                                    <input type="submit" class="button-main" value="Удалить" asp-page="Delete" asp-route-id="@item.Id" onclick="return confirm('Вы действительно хотите удалить эксперта?')" />
+                                </form>
+
+                            </td>
+                        }
+                    }
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+@{
+    if (User != null && User.Identity != null && User.Identity.IsAuthenticated)
+    {
+        <div>
+            <a class="button-secondary" asp-page="Create">Создать эксперта</a>
+        </div>
+    }
+}
+
+
+

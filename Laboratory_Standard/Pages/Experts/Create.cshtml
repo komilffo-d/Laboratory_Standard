@@ -1,0 +1,40 @@
+﻿@page
+@model Laboratory_Standard.Pages.Experts.CreateModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Страница создания эксперта";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="main__supsuptext">
+    Создание эксперта
+</div>
+<div class="create">
+    <div class="create__inner">
+        <form b-b8ywp0f8a6 class="create-form" method="POST" autocomplete="off">
+            <div class="create-form__block">
+                <label class="create-form__block-label">Фамилия</label>
+                <input class="create-form__block-input" b-b8ywp0f8a6 asp-for="ExpertDb.LastName" autocomplete="none" onfocus="this.setAttribute('autocomplete', 'none');" />
+                <label></label>
+            </div>
+            <div class="create-form__block">
+                <label class="create-form__block-label">Имя</label>
+                <input asp-for="ExpertDb.FirstName" b-b8ywp0f8a6 class="create-form__block-input" autocomplete="off autocomplete="none" onfocus="this.setAttribute('autocomplete', 'none');" />
+                <label></label>
+            </div>
+            <div class="create-form__block">
+                <label class="create-form__block-label">Отчество</label>
+                <input asp-for="ExpertDb.MiddleName" b-b8ywp0f8a6 class="create-form__block-input" autocomplete="off autocomplete="none" onfocus="this.setAttribute('autocomplete', 'none');"/>
+                <label></label>
+            </div>
+            <div class="create-form__block">
+                <label class="create-form__block-label">Регистрационный номер</label>
+                <input asp-for="ExpertDb.RegisterNumber" b-b8ywp0f8a6 class="create-form__block-input" autocomplete="off autocomplete="none" onfocus="this.setAttribute('autocomplete', 'none');" />
+                <label></label>
+            </div>
+
+            <input type="submit" value="Создать" class="create-form__button" />
+        </form>
+        <a b-b8ywp0f8a6 asp-page="Index" class="button-secondary">Назад к основной странице</a>
+    </div>
+</div>
+

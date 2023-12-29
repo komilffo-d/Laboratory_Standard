@@ -1,0 +1,30 @@
+﻿@page
+@model Laboratory_Standard.Pages.Login.IndexModel
+@{
+    ViewData["Title"] = "Страница входа";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="login" >
+    <div class="login__inner">
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <form method="POST">
+            <h3>Вход здесь</h3>
+
+            <label for="login">Логин</label>
+            <input type="text" placeholder="Логин" name="login" id="login">
+
+            <label for="password">Пароль</label>
+            <input type="password" placeholder="Пароль" name="password" id="password">
+            @{
+                if (ModelState.ErrorCount > 0)
+                {
+                    <p style="color:red;font-weight:700;text-transform:uppercase;font-size:12px;">Неправильный логин и/или пароль!</p>
+                }
+            }
+            <button>Вход</button>
+        </form>
+    </div>
+</div>

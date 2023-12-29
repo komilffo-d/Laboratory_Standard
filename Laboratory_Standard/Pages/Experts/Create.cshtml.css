@@ -1,0 +1,103 @@
+﻿.create{
+    margin-top:60px;
+}
+
+.create__inner{
+    width:100%;
+    text-align:center;
+}
+
+
+
+.create-form__block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items:center;
+}
+.create-form__block:first-child {
+    margin-top: 0;
+}
+.create-form {
+    background: var(--main-color);
+    border: 3px dashed var(--secondary-color);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 10px;
+}
+.create-form__block-label{
+    font-weight:700;
+    color:var(--secondary-color)
+}
+
+.create-form__block-input {
+    width: 30%;
+    margin: 0;
+    border: none;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    overflow-x: hidden;
+    background: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    margin-top:20px;
+    font-family: 'Museo';
+    font-weight: 400;
+}
+.create-form__block-input:focus{
+        outline:0;
+        width:100%;
+}
+.create-form__button{
+    padding: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-family: "Museo";
+    text-transform: uppercase;
+    margin-top: 20px;
+    width: 40%;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out
+}
+.create-form__button:hover{
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+}
+
+
+create-form__block-input:focus {
+    outline: 0;
+}
+
+
+.create-form__block-input + label {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 30%;
+    border-top: 3px solid var(--secondary-color);
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+}
+
+.create-form__block-input:focus + label {
+        width: 100%;
+}
+
+.create-form__block-input:focus {
+        padding-top: 10px;
+}
+@media (max-width: 650px) {
+    .create-form__block-input{
+        width:60%;
+    }
+    .create-form__block-input + label{
+        width:60%;
+    }
+}

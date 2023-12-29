@@ -1,0 +1,107 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/fonts/fonts.css" />
+    <link rel="stylesheet" href="~/css/main.css"   />
+    <link rel="stylesheet" href="~/@(nameof(Laboratory_Standard)).styles.css" />
+    <link rel="stylesheet" href="~/css/media.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <div class="header__left_logo">
+                    <a href="/Index">
+                        <img class="header__left_logo__image" src="~/image/logo.png" />
+                    </a>
+
+                </div>
+                <div class="header__left_nav">
+                    <a class="header__left_nav__link" asp-area="" asp-page="/Index">Главная</a>
+                    <a class="header__left_nav__link" asp-area="" asp-page="/Methodology/Index">Методика</a>
+                    <a class="header__left_nav__link" asp-area="" asp-page="/Experts/Index">Эксперты</a>
+                </div>
+                
+
+
+
+            </div>
+            <div class="header__right">
+                @{
+                    if (User != null && User.Identity!=null && User.Identity.IsAuthenticated)
+                    {
+                        <button class="header__right_btn-exit"><a href="/Logout/Index" class="header__right_btn-link"><img class="header__right_btn-image" src="~/image/exit.svg" /></a></button>
+                    }
+                    else
+                    {
+                        <button class="button-main"><a href="/Login/Index" class="header__right_btn-link">Войти</a></button>
+                    }
+                }
+
+
+            </div>
+            <div class="navbar">
+                <div class="nav-container">
+                    <input class="nav-checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <div class="nav-menu-items">
+                        <li>
+                            <a href="/Index">
+                                <img class="header__left_logo__image" src="~/image/logo.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header__left_nav__link" asp-area="" asp-page="/Index">Главная</a>
+                        </li>
+                        <li>
+                            <a class="header__left_nav__link" asp-area="" asp-page="/Methodology/Index">Методика</a>
+
+                        </li>
+
+                        <li>
+                            <a class="header__left_nav__link" asp-area="" asp-page="/Experts/Index">Эксперты</a>
+                        </li>
+
+                        @{
+                            if (User != null && User.Identity != null && User.Identity.IsAuthenticated)
+                            {
+
+                                <li>
+                                    <button class="header__right_btn-exit"><a href="/Logout/Index" class="header__right_btn-link"><img class="header__right_btn-image" src="~/image/exit.svg" /></a></button>
+                                </li>
+
+                            }
+                            else
+                            {
+                                <button class="button-main"><a href="/Login/Index" class="header__right_btn-link">Войти</a></button>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        
+         @RenderBody()
+    </div>
+
+    <footer class="footer">
+        <div class="footer__inner">&#169 2023 Все права защищены.</div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

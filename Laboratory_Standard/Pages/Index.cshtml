@@ -1,0 +1,73 @@
+﻿@page
+@using Laboratory_Standard.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IndexModel
+@{
+    ViewData["Title"] = "Главная страница";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+    <div class="main__inner">
+        <div class="main__suptext">
+            ООО «Экспертная группа «Лабораторный стандарт»
+        </div>
+        
+        <div class="main__subtext">
+            Компания является организацией, выполняющей функции экспертной организации, главной целью которой является обеспечение деятельности экспертов по 
+            аккредитации и выполнении порученных им Федеральной службой по аккредитации экспертных работ. Приказ о включении в реестр экспертных организаций  
+            от 30.03.2015 г.  № 3459.
+        </div>
+        <div class="main__supsuptext">
+            Контакты
+        </div>
+        <div class="main-contact">
+            <div class="main-contact__inner">
+                <div class="main-contact__map">
+                    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/5_y_donskoy_proyezd_15s2/Z04Ycw5nQEQAQFtvfXtxd3libA==/?ll=37.600492%2C55.706573&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">5-й Донской проезд, 15с2 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.600492%2C55.706573&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjY4MDQ4MRJD0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsIDUt0Lkg0JTQvtC90YHQutC-0Lkg0L_RgNC-0LXQt9C0LCAxNdGBMiIKDUVkFkIVetNeQg%2C%2C&z=16" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                </div>
+                <div class="main-contact__info">
+                    <div class="main-contact__info-block">
+                        <div class="main-contact__info-block__title">
+                            <div class="main-contact__info-block__title-icon">
+                                <img src="~/image/company.svg" width="30"/>
+                            </div>
+                            Организация
+                        </div>
+                        <div class="main-contact__info-block__subtitle">ООО «ЭГ «Лабораторный стандарт»</div>
+                    </div>
+                                        <div class="main-contact__info-block">
+                        <div class="main-contact__info-block__title">
+                            <div class="main-contact__info-block__title-icon">
+                                <img src="~/image/address.svg" width="30"/>
+                            </div>
+                            Адрес
+                        </div>
+                        <div class="main-contact__info-block__subtitle">119334, г. Москва, Вн.Тер.Г.Муниципальный округ Донской, проезд 5-й Донской, д. 15, стр. 2, этаж 3, помещение/комната V/8А</div>
+                    </div>
+                    <div class="main-contact__info-block">
+                        <div class="main-contact__info-block__title">
+                            <div class="main-contact__info-block__title-icon">
+                                <img src="~/image/email.svg" width="30" />
+                            </div>
+                            E-mail
+                        </div>
+                        <div class="main-contact__info-block__subtitle">EGLabstandart@gmail.com</div>
+                    </div>
+                    <div class="main-contact__info-block">
+                        <div class="main-contact__info-block__title">
+                            <div class="main-contact__info-block__title-icon">
+                                <img src="~/image/phone.svg" width="30" />
+                            </div>
+                            Телефон
+                        </div>
+                        <div class="main-contact__info-block__subtitle">+7-985-238-02-58; +7-915-265-75-75</div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+
+    </div>
+
+</div>

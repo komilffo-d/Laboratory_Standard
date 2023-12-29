@@ -1,0 +1,26 @@
+﻿@media (max-width: 850px) {
+    .header__left_nav{
+        display:none;
+    }
+    .header__right{
+        display:none;
+    }
+    .header__inner{
+        justify-content:flex-end;
+    }
+    .navbar{
+        display:block;
+    }
+}
+@media (max-width: 650px) {
+    .main__suptext{
+        font-size:35px;
+    }
+    .main__supsuptext {
+        font-size: 25px;
+    }
+    .main-contact__inner{
+        flex-direction:column;
+    }
+
+}
