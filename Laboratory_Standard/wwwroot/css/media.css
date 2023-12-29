@@ -1,4 +1,4 @@
-﻿@media (max-width: 850px) {
+@media (max-width: 850px) {
     .header__left_nav{
         display:none;
     }
@@ -10,6 +10,16 @@
     }
     .navbar{
         display:block;
+        height:100%;
+    }
+    body{
+        position:relative;
+    }
+    body:has(.nav-container input[type="checkbox"]:checked){
+        overflow:hidden;
+    }
+    .nav-container{
+        height:inherit;
     }
 }
 @media (max-width: 650px) {
