@@ -1,6 +1,7 @@
 ﻿using Lab_9.Database.Entities;
 using Laboratory_Standard.Database.Entities;
 using Laboratory_Standard.Database.Enum;
+using Microsoft.EntityFrameworkCore;
 
 namespace Laboratory_Standard
 {
