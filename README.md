@@ -41,12 +41,20 @@ Experts Page (Authorization)
 Create Expert Page
 </p>
 
-![image](https://github.com/komilffo-d/Laboratory_Standard-ANC/assets/74680206/392199f0-f189-4da8-8be4-2676a1e79848)
+<p align="center">
+  <img src="https://github.com/komilffo-d/Laboratory_Standard-ANC/assets/74680206/392199f0-f189-4da8-8be4-2676a1e79848">
+
+</p>
+
 <p align="center">
 Main Page (Mobile Version)
 </p>
 
-![image](https://github.com/komilffo-d/Laboratory_Standard-ANC/assets/74680206/29038dd4-a801-4358-8583-e88f2b2c8d39)
+
+<p align="center">
+    <img src="https://github.com/komilffo-d/Laboratory_Standard-ANC/assets/74680206/29038dd4-a801-4358-8583-e88f2b2c8d39">
+</p>
+
 <p align="center">
 Header menu (Mobile Version)
 </p>
